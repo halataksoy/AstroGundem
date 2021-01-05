@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTRO GÜNDEM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.css" type="text/css">
+     <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <style>
+    body{
+     background-color: rgba(230, 220, 235, 0.616);
+     background-image: url("image/Apollo\ Outer\ Space\ Desktop\ Wallpaper.png");
+    }
+    .form-group{
+    color: white;
+    margin-top: 2%;
+    }
+   </style>
+    <script>
+        function Formcontrol()
+        {
+         var isim = document.uyegirisi.kullaniciadi.value;  //HTML document'inin içerisindeki 'uyegirisi' isimli forma oradan da 'kullanıcı adi' isimli inputa ulaşıp valuesini çeker.
+         var mail = document.uyegirisi.email.value;
+         var parola = document.uyegirisi.sifre.value;//HTML document'inin içerisindeki 'uyegirisi' isimli forma oradan da 'sifre' isimli inputa ulaşıp valuesini çeker.
+         
+         if(isim.length == 0) { alert("Kullanıcı alanı bos birakilamaz"); return false;}
+         if(parola.length == 0){ alert("şifre alanı bos gecilemez"); return false;}
+         else if(parola.length <7) { alert("Parola 7 karakterden az olamaz"); return false; }
+         if(mail.length == 0){ alert("e mail alanı bos gecilemez"); return false;}
+         else
+         return true;
+        }
+        </script>
+</head>
+<body>
+<!--Menü kısmı-->
+<div class="menu_bar" >
+    <div class="logo"><img src="image/LogoMakr-6LYUUP.png" alt="">
+    </div>
+        <div class="menu"> 
+            <ul>
+                <li><a href="index.html">ANASAYFA</a></li>
+                <li><a href="hakkımızda.html">HAKKIMIZDA</a></li>
+                <li><a href="astroloji.html">ASTROLOJİ</a></li>
+                <li><a href="burçlar.html">BURÇLAR</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
+                <li><a href="uyegirisi.html">GİRİŞ YAP</a></li>
+                
+            </ul>
+
+            <i class="fas fa-bars"></i>
+        </div>
+</div>
+     <!--Logo ekledik giriş kısmına-->
+    <div class="uyegirisifoto">
+     <img src="image/LogoMakr-6LYUUP.png" alt="Resim Bulunamadı">
+    </div>
+    
+     <!--scripte hangi formdan aldığımızı eklemek için formumuza ve içindeki istenilenlere 
+        bir isim verdik.ayrıca Formcontrol fonsiyonu açtık ki form kontrolerini yapalım 
+        formu göndermeden önce bir fonksiyona yolluyor ve biz hangi fonksiyona götürüp değer döndüreceğini söyledik-->
+    <form name="uyegirisi" onsubmit="return Formcontrol()">
+        <div class="form-group">
+            <label for="adi"> Kullanıcı Adınız</label>
+            <input type="text"  class="form-control" placeholder="Adınızı Giriniz." name="kullaniciadi" >
+        </div>
+        <div class="form-group">
+          <label for="email" >E-mail Adresiniz</label>
+          <input type="email" class="form-control" placeholder="Enter email" name="email">
+          <small id="emailHelp" class="form-text text-muted" >E-postanızı asla başkalarıyla paylaşmayacağız.</small>
+        </div>
+        <div class="form-group">
+          <label for="sifre">Şifreniz</label>
+          <input type="password" class="form-control" placeholder="Password" name="sifre">
+        </div>
+    
+        <button type="submit" class="btn btn-dark">Giriş Yap</button>
+        <br>
+         <a href="kayıtol.html" style="color: white;">Bir üyeliğin yoksa buraya TIKLA!</a>
+    </form>
+
+
+
+
+
+<!--Footer kısmı-->
+
+<div class="alt_alan">
+        <div class="icerik">
+            <h3 style="text-align: center;">Bizi Keşfedin</h3>
+            <p>Her gün kendini güncellemeye çalışan bir platform olma yolunda emin adımlarla ilerliyoruz.
+                sende üye ol burç yorumun mail olarak gelsin..</p>
+        </div>
+        <div class="icerik" style="text-align: center;">
+            <h3 >MENÜ</h3>
+            
+            <a href="index.html">Ana Sayfa</a><br>
+            <a href="hakkımızda.html">Hakkımızda</a><br>
+            <a href="astroloji.html">Astroloji</a><br>
+            <a href="burçlar.html">Burçlar</a><br>
+            <a href="iletisim.html">İletişim</a><br>
+            <a href="kayıtol.html">Kayıt Ol</a>
+
+        </div>
+
+        <div class="icerik"> 
+            <H3 style="text-align: center;">SOSYAL MEDYA</H3>
+            <div class="sosyal">
+            <a href="https://tr-tr.facebook.com/" target="blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/" target="blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://web.whatsapp.com/" target="blank"><i class="fab fa-whatsapp-square"></i></a>
+            <a href="https://www.google.com/intl/tr/gmail/about/" target="blank"><i class="fab fa-google-plus-square"></i></a>
+            </div>
+        </div>
+      
+    </div>
+   
+</body>
+</html>

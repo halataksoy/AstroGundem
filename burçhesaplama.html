@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTRO GÜNDEM|Burcunu Hemen Öğren!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.css" type="text/css">
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script language="javascript" type="text/javascript">
+        /* burç adından Fonksiyon açtık ve form1deki gün/ay değerlerini listede seçilen değerlerini döndürdük ve if döngüleri açarak burçların 
+        tarihlerini yazdık döngülerin içine formlarda verdiğimiz x ve y ile döngülerin içine girerek doğru burcu bulduktan sonra yazdırdık.*/
+        function burcbul() {
+            document.form1.gun.selectedIndex;
+            document.form1.ay.selectedIndex;
+            document.form1.burc.value;
+            if (document.form1.ay.selectedIndex == 1 && document.form1.gun.selectedIndex <= 19) { document.form1.burc.value = "Oğlak"; }
+            if (document.form1.ay.selectedIndex == 1 && document.form1.gun.selectedIndex >= 20) { document.form1.burc.value = "Kova"; }
+            if (document.form1.ay.selectedIndex == 2 && document.form1.gun.selectedIndex <= 18) { document.form1.burc.value = "Kova"; }
+            if (document.form1.ay.selectedIndex == 2 && document.form1.gun.selectedIndex >= 19) { document.form1.burc.value = "Balık"; }
+            if (document.form1.ay.selectedIndex == 3 && document.form1.gun.selectedIndex <= 20) { document.form1.burc.value = "Balık"; }
+            if (document.form1.ay.selectedIndex == 3 && document.form1.gun.selectedIndex >= 21) { document.form1.burc.value = "Koç"; }
+            if (document.form1.ay.selectedIndex == 4 && document.form1.gun.selectedIndex <= 20) { document.form1.burc.value = "Koç"; }
+            if (document.form1.ay.selectedIndex == 4 && document.form1.gun.selectedIndex >= 21) { document.form1.burc.value = "Boğa"; }
+            if (document.form1.ay.selectedIndex == 5 && document.form1.gun.selectedIndex <= 20) { document.form1.burc.value = "Boğa"; }
+            if (document.form1.ay.selectedIndex == 5 && document.form1.gun.selectedIndex >= 21) { document.form1.burc.value = "İkizler"; }
+            if (document.form1.ay.selectedIndex == 6 && document.form1.gun.selectedIndex <= 20) { document.form1.burc.value = "İkizler"; }
+            if (document.form1.ay.selectedIndex == 6 && document.form1.gun.selectedIndex >= 21) { document.form1.burc.value = "Yengeç"; }
+            if (document.form1.ay.selectedIndex == 7 && document.form1.gun.selectedIndex <= 21) { document.form1.burc.value = "Yengeç"; }
+            if (document.form1.ay.selectedIndex == 7 && document.form1.gun.selectedIndex >= 22) { document.form1.burc.value = "Aslan"; }
+            if (document.form1.ay.selectedIndex == 8 && document.form1.gun.selectedIndex <= 21) { document.form1.burc.value = "Aslan"; }
+            if (document.form1.ay.selectedIndex == 8 && document.form1.gun.selectedIndex >= 22) { document.form1.burc.value = "Başak"; }
+            if (document.form1.ay.selectedIndex == 9 && document.form1.gun.selectedIndex <= 21) { document.form1.burc.value = "Başak"; }
+            if (document.form1.ay.selectedIndex == 9 && document.form1.gun.selectedIndex >= 22) { document.form1.burc.value = "Terazi"; }
+            if (document.form1.ay.selectedIndex == 10 && document.form1.gun.selectedIndex <= 21) { document.form1.burc.value = "Terazi"; }
+            if (document.form1.ay.selectedIndex == 10 && document.form1.gun.selectedIndex >= 22) { document.form1.burc.value = "Akrep"; }
+            if (document.form1.ay.selectedIndex == 11 && document.form1.gun.selectedIndex <= 21) { document.form1.burc.value = "Akrep"; }
+            if (document.form1.ay.selectedIndex == 11 && document.form1.gun.selectedIndex >= 22) { document.form1.burc.value = "Yay"; }
+            if (document.form1.ay.selectedIndex == 12 && document.form1.gun.selectedIndex <= 20) { document.form1.burc.value = "Yay"; }
+            if (document.form1.ay.selectedIndex == 12 && document.form1.gun.selectedIndex >= 21) { document.form1.burc.value = "Oğlak"; }
+ 
+            if (document.form1.ay.selectedIndex == "x" || document.form1.gun.selectedIndex == "y") return;
+        }
+        /*bu bizim doğrulama fonksiyonumuz bazı aylar 31 gün olmadığı gibi şubat en fazla 29 gündür o yüzden listede o değerler için uyarı mesajları oluşturduk*/
+        function validate() {
+            if (document.form1.ay.selectedIndex == 2 && document.form1.gun.selectedIndex > 29) { alert("Şubat ayında en fazla 29 gün seçebilirsiniz"); return false; }
+            if (document.form1.ay.selectedIndex == 4 && document.form1.gun.selectedIndex == 31) { alert("Nisan ayında sadece 30 gün vardır."); return false; }
+            if (document.form1.ay.selectedIndex == 6 && document.form1.gun.selectedIndex == 31) { alert("Haziran ayında sadece 30 gün vardır."); return false; }
+            if (document.form1.ay.selectedIndex == 9 && document.form1.gun.selectedIndex == 31) { alert("Eylül ayında sadece 30 gün vardır."); return false; }
+            if (document.form1.ay.selectedIndex == 11 && document.form1.gun.selectedIndex == 31) { alert("Kasım ayında sadece 30 gün vardır."); return false; }
+            else {
+                return true;
+            }
+        }
+ 
+</script>
+   <style>
+        body{
+            background-color: rgba(230, 220, 235, 0.616);
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        } 
+    </style>
+</head>
+<body>
+
+<!--Menü kısmı-->
+    
+<div class="menu_bar">
+    <div class="logo"><img src="image/LogoMakr-6LYUUP.png" alt="">
+    </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">ANASAYFA</a></li>
+                <li><a href="hakkımızda.html">HAKKIMIZDA</a></li>
+                <li><a href="astroloji.html">ASTROLOJİ</a></li>
+                <li><a href="burçlar.html">BURÇLAR</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
+                <li><a href="uyegirisi.html">GİRİŞ YAP</a></li>
+               
+                
+            </ul>
+        </div>
+</div>
+
+<div style="margin-top: 2%;">
+    <a href="https://www.tusas.com/" target="blank"><img src="image/16750170834944862243.gif" alt=""></a>
+    
+</div>
+<!--
+    bir form açtık ve içine tablo oluşturduk ay gün ve burç olucak şekilde
+-->
+
+<form name="form1" id="form1" style="margin-top: 2%;">
+<table>
+    <td>
+        <select name="ay">
+            <option value="x" selected> Ay Seçin</option>
+            <option value="1">Ocak</option>
+            <option value="2">Şubat</option>
+            <option value="3">Mart</option>
+            <option value="4">Nisan</option>
+            <option value="5">Mayıs</option>
+            <option value="6">Haziran</option>
+            <option value="7">Temmuz</option>
+            <option value="8">Ağustos</option>
+            <option value="9">Eylül</option>
+            <option value="10">Ekim</option>
+            <option value="11">Kasım</option>
+            <option value="12">Aralık</option>          
+        </select>
+    </td>
+    <td>
+        <select name="gun" onChange="validate()"><!--yazı alanında 12 ayda her ay aynı çekmediği için change fonksiyonunu çağırdık validate(doğrulamak)-->
+                    <option value="y" selected>Gün Seçin </option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+        </select>
+    </td>
+    <td>
+        <input name="burc" size="12" value=""/>
+        <input type="button" value="Burç Bul" onClick="burcbul()"> <!--burç hesaplamak istediğimizda butona bastığımızda burcbul() fonksiyonunu çağırırız. -->
+    </td>
+  </tr>
+</table>
+</form>
+
+<!--Yorum Yazma Formu-->
+<h5 style="color: #7e00ff;">Yorum Yaz</h5>
+<form class="İletişim">
+    <div class="form-group">
+       <label for="exampleFormControlInput2">Adınız</label>
+       <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Adınızı Giriniz">
+      <label for="exampleFormControlInput1">Email Adresiniz</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Metin</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" cols="40"></textarea>
+    </div>
+    <button type="submit" class="btn btn-dark">Gönder</button>
+</form>
+
+<div class="alt_alan">
+    <div class="icerik">
+        <h3 style="text-align: center;">Bizi Keşfedin</h3>
+        <p>Her gün kendini güncellemeye çalışan bir platform olma yolunda emin adımlarla ilerliyoruz.sende üye ol burç yorumun mail olarak gelsin..</p>
+    </div>
+    <div class="icerik" style="text-align: center;">
+        <h3 >MENÜ</h3>
+        <a href="index.html">Ana Sayfa</a><br>
+        <a href="hakkımızda.html">Hakkımızda</a><br>
+        <a href="astroloji.html">Astroloji</a><br>
+        <a href="burçlar.html">Burçlar</a><br>
+        <a href="iletisim.html">İletişim</a><br>
+        <a href="kayıtol.html">Kayıt Ol</a>
+
+    </div>
+
+    <div class="icerik"> 
+        <H3 style="text-align: center;">SOSYAL MEDYA</H3>
+        <div class="sosyal">
+        <a href="https://tr-tr.facebook.com/" target="blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://twitter.com/" target="blank"><i class="fab fa-twitter-square"></i></a>
+        <a href="https://web.whatsapp.com/" target="blank"><i class="fab fa-whatsapp-square"></i></a>
+        <a href="https://www.google.com/intl/tr/gmail/about/" target="blank"><i class="fab fa-google-plus-square"></i></a>
+        </div>
+    </div>
+  
+</div>
+</body>
+</html>

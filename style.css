@@ -1,0 +1,274 @@
+
+/*menü cssleri*/
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;/*divleri alt alta göstermemizi sağlıyor*/
+    align-items: center;/*tüm divleri ortalamak için kullandık-item-*/
+    
+    
+}
+.menu_bar{
+    height: 100px;
+    width: 100%;
+    background-color:rgba(231, 179, 247, 0.925);
+    border: 2px;
+    display:flex;
+    justify-content:space-around;/*boşluk bırakıyor eşit bi şekilde hizalanmasını sağlıyor*/
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+  
+}
+.logo{
+margin-top:0px;
+}
+.logo img{
+    height: 100px;
+}
+.menu ul li {
+    list-style-type: none;
+    display: inline-block;/*kullanılan etiketlerin hem inline hem de block element özelliği verilmesini sağlıyor*/
+    padding: 5px;
+    margin: 5px;
+}
+.menu a{
+    color: #7e00ff;
+    font-size: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+    border:1px solid white;
+    padding: 10px;
+    transition: 0.5s;/*geçiş efektini 0.5 s verdik*/
+}
+/* renkleriyle oyna */
+.menu li:hover a{
+    color: #7e00ff ;
+    background-color: white;
+
+}
+.menu a:hover{
+    text-decoration: none;
+}
+.menu i{display: none;}
+/*galeri tarafındaki css kodları*/
+.galeri{
+    text-align: center;
+    background:linear-gradient(rgba(174, 97, 177, 0.26),rgba(155, 67, 140, 0.164)), url("image/776.jpg");
+    width: 100%;
+    height: 50vh;/*vh (viewport height): Ekran yüksekliğininin %1'ini ifade eden birim 1vh'dir. 
+    Örneğin mobil cihazın ekran yüksekliği 850px ise 1vh değeri 8.5px'e eşittir.*/
+    background-position: center;/*ortalıyor*/
+    background-size: cover;
+    display:flex;
+    justify-content: center;/*ortalıyor galerinin içindeki içerikleri*/
+    align-items: center;
+    flex-direction: column; /*hangi yönde flex davranışına sahip olacağını belirleyen bir özellik*/
+}
+.galeri .web{
+    color:white;
+    font-family: calibri;
+    font-size: 30px;
+}
+.galeri a{
+    font-family: calibri;
+    color: white;
+    font-size: 20px;
+    padding: 10px 30px;/*burda a etiketine bu değerleri verdik*/
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 1px solid white;
+    background-color: #8000ff1c;
+    transition: 0.5s;
+}
+.galeri a:hover{
+    color:#7e00ff;
+    background-color: white;
+    padding: 10px;/*burda da tıkladığımız zamanki padding değerini verdik o yüzden de geçişli bir şekilde olmasını sağladık*/   
+    text-decoration: none;
+}
+.web h4{
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+/* Orta Alan css kodlarımız*/
+.orta_alan{
+    display: flex;/*kutularımızı yan yana alıyor otomatik olarak flex-box yapısından*/
+    width: 95%;
+    justify-content: space-around;/*orta_alandaki her kutuya eşit boşluk ve hizalama yapıyor*/
+    flex-wrap: wrap;
+}
+.orta{
+    width: 22%;
+    border: 2px solid black ;
+    border-radius: 2px;
+    margin: 2% 0;
+    box-sizing: border-box;/*22%+2px değil de 22% olmasını sağlıyor 2 pxi 22%lik kısımdan vermemizi sağladı.*/
+    background: linear-gradient(rgba(204, 85, 204, 0.171),rgba(163, 105, 180, 0.082));
+    flex-wrap: wrap;
+}
+.orta .icerik{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    text-align: justify;
+    color:black;
+    text-align: center;
+    flex-wrap: wrap;
+    
+}
+.orta a{
+    color:#7e00ff;
+   
+}
+.orta a:hover{
+    color:white;
+   
+    
+}
+.orta p{
+    text-indent: 15px;/*satır başı yaptık*/
+    color: rgb(0, 0, 0);
+}
+.orta img{
+    width: 50%;
+}
+/*alt alan css kodlarımız*/
+.alt_alan{
+    display: flex;
+    flex-wrap: wrap;/*taşma olursa aşağıya düşmesini sağlıyot*/
+    width: 100%;
+    height:40vh;
+    background-color:rgba(231, 179, 247, 0.925);
+    color: #000000;
+    margin-top: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+
+}
+.alt_alan .icerik{
+    width: 33%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+.alt_alan .sosyal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size:40px;
+    border-top: 2px solid black;
+}
+.alt_alan i {
+    margin: 20px;
+}
+.alt_alan p{
+    color: #7e00ff;
+}
+.alt_alan a{
+    color: #7e00ff;
+}
+.sosyal a:nth-child(1):hover{color:#3700ff;} /*sosyal sınıfının çocuğunun elemanlarına css verdik. aynı zamanda sosyal medya kısmını düzenledik.*/
+.sosyal a:nth-child(2):hover{color:#0099ff;}
+.sosyal a:nth-child(3):hover{color:#00ff40;}
+.sosyal a:nth-child(4):hover{color:#ff5e00;}
+
+
+/*burçlar.html sayfasının slider cssleri*/
+.burçlar{
+    color:#7e00ff; 
+    font-size: 20px;
+    list-style-type: none;
+    border: 3px solid #7e00ff;
+}
+.owl-carousel .item{
+    background-color: #7e00ff;
+    height: 300px;
+
+}
+.ortala{
+height: 300px;
+display: table;
+position: relative;
+overflow: hidden;
+text-align:center;
+margin:0 auto;
+}
+#form1{
+    border: 2px solid #7e00ff;
+    padding: 5%;
+    background: linear-gradient(rgba(204, 85, 204, 0.171),rgba(163, 105, 180, 0.082));
+}
+/*yıllık burç yorumları*/
+.youtube{
+    border: 2px solid #7e00ff;
+    padding: 2%;
+    margin-top:5%;
+    background-color: white;
+}
+.content{
+    text-align:center;
+    font-size: 20px;
+    flex-wrap: wrap;
+    border: 2px solid rgb(238, 221, 234);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    color:#7e00ff
+
+}
+.ulsınıfı{
+   list-style-type: none;
+   text-align: center;
+   color: #7e00ff;
+   display: block;
+   background-color: white; 
+   margin-bottom:4%;
+}
+/*hakkımızda cssleri*/
+.hakkımızda{
+    color:#000000;
+    text-align:center;
+    font-size: 20px;
+}
+.hakkımızda_burc{
+       font-size: 20px;
+       color:#7e00ff;
+      
+       list-style-type: none;        
+}
+.hakkımızda_galeri img{
+       width: 50%;
+       margin-top: 2%;
+       display: flex;
+       flex-wrap: wrap;
+}
+hr{
+    color: #7e00ff;
+}
+.gunlukburcyorumu{
+    font-size: medium;
+    border: 3px solid #7e00ff;
+    text-align: center;
+}
+/*devamınıoku.html css*/
+.container{
+    text-align:center;
+    text-indent:15px ;
+    margin-top: 2%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: -7%;
+    color: black;
+    background-color: white;
+
+}
+.container img{
+    width: 45%;
+    height: 300px;
+}
